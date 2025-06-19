@@ -19,9 +19,9 @@ body {
   
 
 }
-body,h1,h2,h3,h4,h5 {
+h1,h2,h3,h4,h5 {
     padding: 0;
-    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif
+    font-family: 'Lato',sans-serif;
 }
 
 h1,h2,h3,h4,h5 {
@@ -31,14 +31,12 @@ h1,h2,h3,h4,h5 {
 }
 
 .topbar {
-
-  padding: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
   padding: 20px;
   z-index: 5;
-   position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -102,7 +100,7 @@ h1,h2,h3,h4,h5 {
   gap: 6px;
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -212,35 +210,30 @@ h1,h2,h3,h4,h5 {
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 3 1;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .product-card {
-    width: 19%;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    transition: opacity 1s, max-height 1s, padding 1s;
-    max-height: 1000px;
-    overflow: hidden;
-    position: relative;
+    padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 
 
 .product-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  border-radius: 5px;
 }
 
 .product-card img:hover{
-  width: 250px;
+  transform: scale(1.03);
 }
 .product-card h3 {
   margin: 0.5rem 0;
@@ -299,4 +292,48 @@ padding: 1px;
 
 .cat{
  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  
+  .logo{
+    display: none;
+  }
+
+  .page-content {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+
+  .catalog {
+    flex: 1;
+    margin-top: 0; 
+    margin-left: -10px;
+}
+
+.sidebar{
+  margin-top: 4rem;
+}
+  .menu-container,
+  .TopBar_center__bP0o5 {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+.div_logo{
+  display: none;
+}
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .menu-search {
+    height: 60px;
+    width: 60px;
+  }
 }
