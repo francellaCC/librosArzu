@@ -337,3 +337,10 @@ padding: 1px;
     width: 60px;
   }
 }
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: start;
+  }
+}
