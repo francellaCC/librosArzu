@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styleVariante.css" />
   <!-- Start VWO Async SmartCode -->
   <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
   <script type='text/javascript' id='vwoCode'>
@@ -37,11 +37,15 @@
       <div class="div_logo">
         <img src="../imagenes/logo (1).png" alt="Logo Libros Arzu" class="logo" />
       </div>
+      <!-- Hamburguesa solo visible en móvil -->
+      <button id="menuToggle" class="hamburguesa-btn">
+        ☰
+      </button>
       <div class="TopBar_center__bP0o5">
         <nav class="menu">
           <ul class="nav-links">
             <li><a href="#"><img src="/imagenes/home.svg" style="width: 16px;" alt="" srcset="">Home</a></li>
-            <li><a href="../index.html"><img src="/imagenes/grid.svg" alt="" srcset=""> Catalogo</a></li>
+            <li><a href="../index2.html"><img src="/imagenes/grid.svg" alt="" srcset=""> Catalogo</a></li>
             <li><a href="#"><span class="material-icons">
                   phone_in_talk
                 </span> Whatsapp</a></li>
@@ -59,7 +63,98 @@
   </header>
 
   <div class="page-content">
-    <main class="catalog" style="padding-top: 50px;">
+
+    <aside class="sidebar" id="sidebar">
+      <div id="toggleCategorias" class="dropDown_list">
+        <h2>Categorías</h2>
+      </div>
+      <div class="categorias-menu">
+
+        <div class="categoria">
+          <button class="categoria-btn">
+            Literatura
+            <span class="material-icons flecha">
+              expand_more
+            </span>
+          </button>
+
+          <div class="subcategoria">
+            <a class="cat" href="#">Novela</a>
+            <a class="cat" href="#">Cuento</a>
+            <a class="cat" href="#">Antología</a>
+            <a class="cat" href="#">Poesía</a>
+            <a class="cat" href="clasicos.html">Clásicos</a>
+          </div>
+        </div>
+
+        <div class="categoria">
+          <button class="categoria-btn">Ficción
+            <span class="material-icons flecha">
+              expand_more
+            </span>
+          </button>
+          <div class="subcategoria">
+            <a class="cat" href="#">Fantasía</a>
+            <a class="cat" href="#">Terror</a>
+            <a class="cat" href="#">Thriller y crimen</a>
+            <a class="cat" href="#">Novela histórica</a>
+            <a class="cat" href="#">Novela contemporánea</a>
+            <a class="cat" href="novelaRomantica.html">Novela romántica</a>
+            <a class="cat" href="#">Romance</a>
+            <a class="cat" href="#">Romance juvenil</a>
+            <a class="cat" href="infantil.html">Infantil</a>
+            <a class="cat" href="adultoJoven.html">Adulto joven</a>
+          </div>
+        </div>
+
+        <!-- No ficción -->
+        <div class="categoria">
+          <button class="categoria-btn">No ficción <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="#">Autoayuda</a>
+            <a class="cat" href="#">Psicología</a>
+            <a class="cat" href="#">Filosofía</a>
+            <a class="cat" href="#">Espiritualidad</a>
+            <a class="cat" href="#">Esoterismo</a>
+            <a class="cat" href="#">Finanzas y desarrollo personal</a>
+            <a class="cat" href="#">Historia</a>
+          </div>
+        </div>
+
+        <!-- Destacados -->
+        <div class="categoria">
+          <button class="categoria-btn">Destacados <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="nuevos.html">Nuevos</a>
+            <a class="cat" href="#">Novedades</a>
+            <a class="cat" href="descuentos.html">Descuentos</a>
+            <a class="cat" href="navidad.html">Navidad</a>
+            <a class="cat" href="usados.html">Usados</a>
+            <a class="cat" href="otros.html">Otros</a>
+          </div>
+        </div>
+
+        <!-- Cultura y ocio -->
+        <div class="categoria">
+          <button class="categoria-btn">Cultura y ocio <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="geek.html">Cultura geek</a>
+            <a class="cat" href="cafeteria.html">Cafetería</a>
+            <a class="cat" href="tienda.html">Tienda literaria</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Overlay para fondo oscuro -->
+    <div class="overlay" id="overlay"></div>
+
+    <main class="catalog">
       <div>
         <h2>Usados</h2>
         <div class="product-grid">
@@ -166,7 +261,7 @@
       <div style="display: flex; justify-content: space-between;">
         <div>
           <img src="../imagenes/logo (1).png" alt="Logo Libros Arzu" class="logo" style="    width: 100px;
-    height: auto;display: block;" />
+    height: auto;" />
         </div>
         <div style="text-align: justify; width: 50%;">
           <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff;">Sobre Nosotros</h3>
@@ -196,7 +291,7 @@
       </div>
     </div>
   </footer>
-  <script src="/main.js"></script>
+  <script src="/mainVariante.js"></script>
 </body>
 
 </html>

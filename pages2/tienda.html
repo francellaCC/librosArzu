@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="icon" type="image/png" href="./imagenes/logo (1).png">
-  <title>DESCUENTOS - Libros Arzu</title>
+  <link rel="icon" type="image/png" href="./imagenes/logo (1).png">
+  <title>TIENDA LITERARIA - Libros Arzu</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,8 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="../style.css" />
-  <!-- Start VWO Async SmartCode -->
+  <link rel="stylesheet" href="../styleVariante.css" />
+<!-- Start VWO Async SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type='text/javascript' id='vwoCode'>
 window._vwo_code || (function() {
@@ -36,11 +36,15 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       <div class="div_logo">
         <img src="../imagenes/logo (1).png" alt="Logo Libros Arzu" class="logo" />
       </div>
+      <!-- Hamburguesa solo visible en móvil -->
+      <button id="menuToggle" class="hamburguesa-btn">
+        ☰
+      </button>
       <div class="TopBar_center__bP0o5">
         <nav class="menu">
           <ul class="nav-links">
             <li><a href="#"><img src="/imagenes/home.svg" style="width: 16px;" alt="" srcset="">Home</a></li>
-            <li><a href="../index.html"><img src="/imagenes/grid.svg"  alt="" srcset=""> Catalogo</a></li>
+            <li><a href="../index2.html"><img src="/imagenes/grid.svg" alt="" srcset=""> Catalogo</a></li>
             <li><a href="#"><span class="material-icons">
                   phone_in_talk
                 </span> Whatsapp</a></li>
@@ -58,88 +62,176 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
   </header>
 
   <div class="page-content">
-    <main class="catalog" style="padding-top: 50px;">
-      <div >
-        <h2>DESCUENTOS</h2>
+
+    <aside class="sidebar" id="sidebar" >
+      <div id="toggleCategorias" class="dropDown_list">
+        <h2>Categorías</h2>
+      </div>
+      <div class="categorias-menu">
+
+        <div class="categoria">
+          <button class="categoria-btn">
+            Literatura
+            <span class="material-icons flecha">
+              expand_more
+            </span>
+          </button>
+
+          <div class="subcategoria">
+            <a class="cat" href="#">Novela</a>
+            <a class="cat" href="#">Cuento</a>
+            <a class="cat" href="#">Antología</a>
+            <a class="cat" href="#">Poesía</a>
+            <a class="cat" href="clasicos.html">Clásicos</a>
+          </div>
+        </div>
+
+        <div class="categoria">
+          <button class="categoria-btn">Ficción
+            <span class="material-icons flecha">
+              expand_more
+            </span>
+          </button>
+          <div class="subcategoria">
+            <a class="cat" href="#">Fantasía</a>
+            <a class="cat" href="#">Terror</a>
+            <a class="cat" href="#">Thriller y crimen</a>
+            <a class="cat" href="#">Novela histórica</a>
+            <a class="cat" href="#">Novela contemporánea</a>
+            <a class="cat" href="novelaRomantica.html">Novela romántica</a>
+            <a class="cat" href="#">Romance</a>
+            <a class="cat" href="#">Romance juvenil</a>
+            <a class="cat" href="infantil.html">Infantil</a>
+            <a class="cat" href="adultoJoven.html">Adulto joven</a>
+          </div>
+        </div>
+
+        <!-- No ficción -->
+        <div class="categoria">
+          <button class="categoria-btn">No ficción <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="#">Autoayuda</a>
+            <a class="cat" href="#">Psicología</a>
+            <a class="cat" href="#">Filosofía</a>
+            <a class="cat" href="#">Espiritualidad</a>
+            <a class="cat" href="#">Esoterismo</a>
+            <a class="cat" href="#">Finanzas y desarrollo personal</a>
+            <a class="cat" href="#">Historia</a>
+          </div>
+        </div>
+
+        <!-- Destacados -->
+        <div class="categoria">
+          <button class="categoria-btn">Destacados <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="nuevos.html">Nuevos</a>
+            <a class="cat" href="#">Novedades</a>
+            <a class="cat" href="descuentos.html">Descuentos</a>
+            <a class="cat" href="navidad.html">Navidad</a>
+            <a class="cat" href="usados.html">Usados</a>
+            <a class="cat" href="otros.html">Otros</a>
+          </div>
+        </div>
+
+        <!-- Cultura y ocio -->
+        <div class="categoria">
+          <button class="categoria-btn">Cultura y ocio <span class="material-icons flecha">
+              expand_more
+            </span></button>
+          <div class="subcategoria">
+            <a class="cat" href="geek.html">Cultura geek</a>
+            <a class="cat" href="cafeteria.html">Cafetería</a>
+            <a class="cat" href="tienda.html">Tienda literaria</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+     <!-- Overlay para fondo oscuro -->
+    <div class="overlay" id="overlay"></div>
+
+    <main class="catalog">
+      <div>
+        <h2>TIENDA LITERARIA</h2>
         <div class="product-grid">
           <div class="product-card">
-            <img src="../imagenes/descuentos/9788419252418_20fee43144.webp" alt="CUANDO DESPIERTE...">
-            <h3>una perdición de ruina</h3>
-            <p class="price">₡14000</p>
+            <img src="../imagenes/tienda/978840827689_efdfaad418.jpeg" alt="CUANDO DESPIERTE...">
+            <h3>CUADERNO DE LECTU...</h3>
+            <p class="price">₡17000</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/mejor_que_ayer_112102_921a301d07.jpg" alt="HOTARU">
-            <h3>MEJOR QUE AYER
-            </h3>
-            <p class="price">₡10000</p>
+            <img src="../imagenes/tienda/2bed2e31_dbf0_4b6e_a2ac_6301bc9ea812_f8172b0ff1.jpeg" alt="HOTARU">
+            <h3>BANDERITAS DE COL...</h3>
+            <p class="price">₡1500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/las_luces_de_febrero_111143_42c54522fe.jpg" alt="EL HOMBRE DE TIZA">
-            <h3>LAS LUCES DE FEBRERO</h3>
-            <p class="price">₡15000</p>
+            <img src="../imagenes/tienda/6f7a2d59_f567_47f2_a6a6_4d1bb71757b2_4204ce1f39.jpeg" alt="EL HOMBRE DE TIZA">
+            <h3>LAPICES DE COLOR FA...</h3>
+            <p class="price">₡4500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/OIP_11_2cb9bdb7fb.jpeg" alt="EL INVIERNO DEL LOBO">
-            <h3>EL HOMBRE MÁS RIC...</h3>
+            <img src="../imagenes/tienda/bookmarkouch_444174800d.jpg" alt="EL INVIERNO DEL LOBO">
+            <h3>BOOKMARK OUCH!</h3>
+            <p class="price">₡4500</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/1.jpeg" alt="LA IRA DE LOS ÁNGELES">
+            <h3>FUNDA ALAS DE SAN...</h3>
             <p class="price">₡7500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/90871a_d763947f82c7441cb8dd5e7b2394422c_mv2_2c32c87240.webp" alt="LA IRA DE LOS ÁNGELES">
-            <h3>EL DIARIO DE ANA FR...</h3>
-            <p class="price">₡13500</p>
+            <img src="../imagenes/tienda/5.jpeg" alt="LA IRA DE LOS ÁNGELES">
+            <h3>FUNDA DRAGON ALA...</h3>
+            <p class="price">₡7500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/9788419030962_f03d6042b6.webp" alt="LA IRA DE LOS ÁNGELES">
-            <h3>TLA CIUDAD DEL POLV...</h3>
-            <p class="price">₡16800</p>
+            <img src="../imagenes/tienda/3.jpeg" alt="EL PSICOANALISTA">
+            <h3>FUNDA FEYRE Y RHYS</h3>
+            <p class="price">₡7500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/f50219f2_ae65_48d5_b1ff_9e283d13356e_72f76c6c93.jpeg" alt="EL PSICOANALISTA">
-            <h3>EL ARTE DE ENGAÑAR</h3>
-            <p class="price">₡9500</p>
+            <img src="../imagenes/tienda/2.jpeg" alt="CUANDO DESPIERTEN LAS FLORES">
+            <h3>FUNDA ACOTAR</h3>
+            <p class="price">₡7500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/180193283_cd8c04fab6.jpg" alt="CUANDO DESPIERTEN LAS FLORES">
-            <h3>MÁS ALLÁ DE LOS BRI...
-
+            <img src="../imagenes/tienda/6.jpeg" alt="SCARPETTA">
+            <h3>FUNDA ELFHAME</h3>
+            <p class="price">₡7500</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/4.jpeg" alt="SCARPETTA">
+            <h3>FUNDA PRICIPE CRUEL</h3>
+            <p class="price">₡7500</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/8.jpeg" alt="SCARPETTA">
+            <h3>FUNDA BOLSO</h3>
+            <p class="price">₡7500</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/9.jpeg" alt="SCARPETTA">
+            <h3>SEPARADOR DE SANGRE Y CENIZAS</h3>
+            <p class="price">₡600</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/7.jpeg" alt="SCARPETTA">
+            <h3>SEPARADOR PRINCIPI...</h3>
+            <p class="price">₡1500</p>
+          </div>
+          <div class="product-card">
+            <img src="../imagenes/tienda/b1955389_fdc6_43f0_81e3_74d423dc54ab_ffc728e32d.jpeg" alt="SCARPETTA">
+            <h3>BOLSA PRINCIPITO
             </h3>
-            <p class="price">₡10500</p>
+            <p class="price">₡6500</p>
           </div>
           <div class="product-card">
-            <img src="../imagenes/descuentos/quedara_el_amor_112674_876d7d90e0.jpg" alt="SCARPETTA">
-            <h3>QUEDARA EL AMOR</h3>
-            <p class="price">₡14000</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/9788419085597_3e9f55c53d.webp" alt="SCARPETTA">
-            <h3>CUANDO EL CIELO SE...</h3>
-            <p class="price">₡13500</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/cuando_acabe_el_invierno_y_volvamos_a_volar_108718_78e745d860.jpg" alt="SCARPETTA">
-            <h3>CUANDO ACABE EL IN...</h3>
-            <p class="price">₡13500</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/213153393_e00035d158.jpg" alt="SCARPETTA">
-            <h3>JOSH Y HAZEL: GUÍA...</h3>
-            <p class="price">₡13500</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/OIP_51_cf25c54b80.jpeg" alt="SCARPETTA">
-            <h3>MESTIZA</h3>
-            <p class="price">₡13500</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/el_gato_que_cuidaba_las_bibliotecas_112802_dffaf49ba6.jpg" alt="SCARPETTA">
-            <h3>EL GATO QUE CUIDAB...
-            </h3>
-            <p class="price">₡12000</p>
-          </div>
-          <div class="product-card">
-            <img src="../imagenes/descuentos/71lz_Pt0_Zc7_L_SL_1496_0f6ddffa24.jpg" alt="SCARPETTA">
-            <h3>HECHIZADA</h3>
-            <p class="price">₡13500</p>
+            <img src="../imagenes/tienda/7c440273_60df_4457_bdd3_31aa6d242ba8_56cc892c92.jpeg" alt="SCARPETTA">
+            <h3>BOLSA JUST A GIRL &...</h3>
+            <p class="price">₡6500</p>
           </div>
         </div>
       </div>
@@ -152,8 +244,6 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       </span></button>
     <button class="paginador-btn">1</button>
     <button class="paginador-btn">2</button>
-    <button class="paginador-btn">3</button>
-    <button class="paginador-btn">4</button>
     <button class="paginador-btn flecha arrow2"><span class="material-icons">
         arrow_forward_ios
       </span></button>
@@ -166,7 +256,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       <div style="display: flex; justify-content: space-between;">
         <div>
           <img src="../imagenes/logo (1).png" alt="Logo Libros Arzu" class="logo" style="    width: 100px;
-    height: auto; display: block;" />
+    height: auto;" />
         </div>
         <div style="text-align: justify; width: 50%;">
           <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff;">Sobre Nosotros</h3>
@@ -196,7 +286,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       </div>
     </div>
   </footer>
-  <script src="/main.js"></script>
+  <script src="../mainVariante.js"></script>
 </body>
 
 </html>
